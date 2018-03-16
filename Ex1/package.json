@@ -1,0 +1,14 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "Exercise 1: Reverse geocoding with Google Maps API and calculate distance between 2 points on Earth surface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nguyễn Tấn Nam Anh",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^0.4.5"
+  }
+}
