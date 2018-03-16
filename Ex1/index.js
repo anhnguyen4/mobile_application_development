@@ -34,10 +34,10 @@ http.createServer(function(request, response) {
             Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     var d = R * c;
-    response.write(d.toString() + " km\n");
+    response.write("The distance is " + d.toString() + " km\n");
     response.end();
   } else {
-    response.write("Invalid arguments\n");
+    response.write("Usage: Append the parameters after the host name (in this case, the host name is http://127.0.0.1:8675/)\n\- latlng, with the form [latitude],[longitude]: to get the formatted address of the location at the given coordinate.\nExample URL: http://127.0.0.1:8675/?latlng=10.7726084,-106.6555523\n -lt1, lt2, ln1, ln2: to calculate the distance (in km) between those 2 points on the Earth surface.\nExample URL: http://127.0.0.1:8675/?lt1=10.7726084&ln1=106.6555523&lt2=10.8805927&ln2=106.803533");
     response.end();
   }
 }).listen(8675);
